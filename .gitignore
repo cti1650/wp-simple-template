@@ -3,10 +3,7 @@ wp-content/languages
 !wp-content/plugins
 wp-content/plugins/*
 !wp-content/themes
-wp-content/themes/twentytwentyone
-wp-content/themes/twentytwentytwo
-wp-content/themes/twentytwentythree
-wp-content/themes/index.php
+wp-content/themes/*
 
 /node_modules
 

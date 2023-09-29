@@ -2,8 +2,7 @@
   "name": "wp-simple-template",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/cti1650/wp-test.git",
-  "author": "cti1650 <cti1650@gmail.com>",
+  "repository": "https://github.com/cti1650/wp-simple-template.git",
   "license": "MIT",
   "scripts": {
     "setup": "cp .env.sample .env",

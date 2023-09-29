@@ -5,6 +5,7 @@ services:
     # image: mysql/mysql-server:5.7
     image: mysql:latest
     platform: linux/amd64
+    restart: always
     volumes:
       - v_mysql:/var/lib/mysql
     ports:
@@ -17,10 +18,12 @@ services:
     depends_on:
       - mysql
     build: ./docker/wordpress
+    restart: always
     volumes:
       # - ./html:/var/www/html
       - v_wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     ports:
       - "8000:80"
     # restart: always

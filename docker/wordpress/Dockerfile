@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get -y install wget unzip
 
 # WP テーマ (zip) ダウンロード
-WORKDIR /tmp/wp-plugins
+WORKDIR /tmp/wp-themes
 
 # WP プラグイン (zip) ダウンロード
 WORKDIR /tmp/wp-plugins
