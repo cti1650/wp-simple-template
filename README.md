@@ -1,4 +1,4 @@
-# wp-test
+# wp-simple-template
 
 ## 目的
 
