@@ -6,10 +6,12 @@
   "author": "cti1650 <cti1650@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "setup": "cp .env.sample .env",
     "build": "docker-compose build --no-cache",
     "start": "docker-compose up -d --build",
     "stop": "docker-compose stop",
     "down": "docker-compose down --volumes",
-    "wpcli": "docker-compose run --rm wpcli"
+    "wpcli": "docker-compose run --rm wpcli",
+    "backup:db": "docker exec -it mysql sh -c 'mysqldump $MYSQL_DATABASE -u $MYSQL_USER -p $MYSQL_PASSWORD 2> /dev/null' > v_mysql/mysql.dump.sql"
   }
 }

@@ -7,20 +7,17 @@ services:
     platform: linux/amd64
     volumes:
       - v_mysql:/var/lib/mysql
+      - ./v_mysql/mysql.dump.sql:/docker-entrypoint-initdb.d/install_wordpress.sql
     ports:
       # ポートを指定し、外部から接続させる
       - "3306:3306"
     # restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+    env_file: .env
 
   wordpress:
     depends_on:
       - mysql
-    image: wordpress
+    build: ./docker/wordpress
     volumes:
       # - ./html:/var/www/html
       - v_wordpress:/var/www/html
@@ -31,9 +28,7 @@ services:
     environment:
       TZ: "Asia/Tokyo"
       WORDPRESS_DB_HOST: mysql:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
+    env_file: .env
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest

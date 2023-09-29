@@ -2,6 +2,9 @@ wp-content/*
 wp-content/languages
 !wp-content/plugins
 wp-content/plugins/akismet
+wp-content/plugins/contact-form-7
+wp-content/plugins/syntaxhighlighter
+wp-content/plugins/wp-emmet
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
 !wp-content/themes
@@ -9,3 +12,5 @@ wp-content/themes/twentytwentyone
 wp-content/themes/twentytwentytwo
 wp-content/themes/twentytwentythree
 wp-content/themes/index.php
+
+.env
