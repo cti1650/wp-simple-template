@@ -7,7 +7,6 @@ services:
     platform: linux/amd64
     volumes:
       - v_mysql:/var/lib/mysql
-      # - ./v_mysql/mysql.dump.sql:/docker-entrypoint-initdb.d/install_wordpress.sql
     ports:
       # ポートを指定し、外部から接続させる
       - "3306:3306"

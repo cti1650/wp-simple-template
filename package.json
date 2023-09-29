@@ -1,5 +1,5 @@
 {
-  "name": "wp-test",
+  "name": "wp-simple-template",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/cti1650/wp-test.git",
@@ -11,7 +11,6 @@
     "start": "docker-compose up -d --build",
     "stop": "docker-compose stop",
     "down": "docker-compose down --volumes",
-    "wpcli": "docker-compose run --rm wpcli",
-    "backup:db": "docker exec -it mysql sh -c 'mysqldump $MYSQL_DATABASE -u $MYSQL_USER -p $MYSQL_PASSWORD 2> /dev/null' > v_mysql/mysql.dump.sql"
+    "wpcli": "docker-compose run --rm wpcli"
   }
 }
